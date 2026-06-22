@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Roadmap from "./Roadmap";
+import TutorChat from "./TutorChat";
 
 function Dashboard() {
   return (
@@ -7,37 +8,33 @@ function Dashboard() {
       <Navbar />
 
       <div className="container dashboard">
-
         <h1>Welcome Back 👋</h1>
 
         <p>
-          Continue your personalized learning journey with AI-powered guidance.
+          Continue your personalized learning journey with your AI-powered
+          tutor.
         </p>
 
-        <br />
-
         <div className="cards">
-
           <div className="card">
-            <h3>Current Course</h3>
-            <p>Artificial Intelligence</p>
+            <h3>📚 Current Course</h3>
+            <p>Artificial Intelligence Fundamentals</p>
           </div>
 
           <div className="card">
-            <h3>Learning Streak</h3>
-            <p>7 Days 🔥</p>
+            <h3>🔥 Learning Streak</h3>
+            <p>7 Days</p>
           </div>
 
           <div className="card">
-            <h3>XP Earned</h3>
+            <h3>⭐ XP Earned</h3>
             <p>520 XP</p>
           </div>
 
           <div className="card">
-            <h3>Progress</h3>
-            <p>35%</p>
+            <h3>🎯 Progress</h3>
+            <p>35% Completed</p>
           </div>
-
         </div>
 
         <br />
@@ -46,8 +43,11 @@ function Dashboard() {
 
         <br />
 
-        <button>Continue Learning</button>
+        <TutorChat />
 
+        <br />
+
+        <button>Continue Learning</button>
       </div>
     </>
   );
