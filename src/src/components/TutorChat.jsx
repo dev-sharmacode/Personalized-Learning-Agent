@@ -1,24 +1,27 @@
 import { useState } from "react";
+import { askGemini } from "../services/geminiService";
 
 function TutorChat() {
   const [question, setQuestion] = useState("");
   const [response, setResponse] = useState("");
 
-  const askTutor = () => {
+  const handleAsk = async () => {
     if (!question.trim()) return;
 
-    setResponse(
-      "🤖 AI Tutor: Great question! This is a demo response. Once Gemini API is connected, you'll receive intelligent, personalized answers here."
-    );
+    setResponse("Thinking...");
+
+    const answer = await askGemini(question);
+
+    setResponse(answer);
   };
 
   return (
     <div className="card">
-      <h2>AI Tutor</h2>
+      <h2>🤖 AI Tutor</h2>
 
       <input
         type="text"
-        placeholder="Ask your question..."
+        placeholder="Ask anything..."
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
         style={{
@@ -31,7 +34,7 @@ function TutorChat() {
       />
 
       <button
-        onClick={askTutor}
+        onClick={handleAsk}
         style={{ marginTop: "15px" }}
       >
         Ask AI
@@ -41,7 +44,7 @@ function TutorChat() {
         <div
           style={{
             marginTop: "20px",
-            background: "#f3f4f6",
+            background: "#EEF2FF",
             padding: "15px",
             borderRadius: "10px"
           }}
