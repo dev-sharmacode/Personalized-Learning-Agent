@@ -1,28 +1,23 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 function Dashboard() {
   return (
     <>
-      <header>
-        <div className="container">
-          <h1>🎓 Personalized Learning Agent</h1>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="container dashboard">
+        <h1>Welcome Back 👋</h1>
 
-        <h2>Welcome Back, Learner 👋</h2>
         <p>
           Continue your personalized learning journey with AI-powered guidance.
         </p>
-
-        <br />
 
         <div className="cards">
 
           <div className="card">
             <h3>📚 Current Course</h3>
-            <p>Introduction to Artificial Intelligence</p>
+            <p>Artificial Intelligence Fundamentals</p>
           </div>
 
           <div className="card">
@@ -42,8 +37,6 @@ function Dashboard() {
 
         </div>
 
-        <br />
-
         <button>Continue Learning</button>
 
       </main>
@@ -51,4 +44,5 @@ function Dashboard() {
   );
 }
 
+export default Dashboard;
 export default Dashboard;
