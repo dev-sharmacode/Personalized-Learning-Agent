@@ -257,55 +257,7 @@ Tutor Chat
 
 ---
 
-# Demo
 
-## Landing Page
-
-![Landing](docs/screenshots/landing.png)
-
----
-
-## Dashboard
-
-![Dashboard](docs/screenshots/dashboard.png)
-
----
-
-## Personalized Learning Roadmap
-
-![Roadmap](docs/screenshots/roadmap.png)
-
----
-
-## Study Room
-
-![Study Room](docs/screenshots/study-room.png)
-
----
-
-## AI Tutor
-
-![AI Tutor](docs/screenshots/tutor-chat.png)
-
----
-
-## Quiz Module
-
-![Quiz](docs/screenshots/quiz.png)
-
----
-
-## Analytics Dashboard
-
-![Analytics](docs/screenshots/analytics.png)
-
----
-
-## Accessibility Settings
-
-![Accessibility](docs/screenshots/accessibility.png)
-
----
 
 # Project Structure
 
