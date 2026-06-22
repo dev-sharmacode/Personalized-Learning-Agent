@@ -1,111 +1,250 @@
+<div align="center">
+
 # Personalized Learning Agent
 
-> An AI-powered adaptive learning platform that delivers personalized education through intelligent tutoring, adaptive learning pathways, accessibility features, and real-time progress tracking.
+### AI-Powered Adaptive Learning Platform
 
-<p align="center">
+An intelligent learning platform that personalizes education using AI-powered tutoring, adaptive learning paths, accessibility-first design, and real-time progress tracking.
+
+**Developed for the Google & Kaggle AI – Agent for Good Challenge**
+
+<br>
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite)
-![Gemini AI](https://img.shields.io/badge/Google-Gemini%20API-4285F4?logo=google)
+![Gemini](https://img.shields.io/badge/Google-Gemini%20API-4285F4?logo=google)
 ![License](https://img.shields.io/badge/License-MIT-success)
-![Status](https://img.shields.io/badge/Status-Active-success)
 
-</p>
-
----
-
-## Overview
-
-Personalized Learning Agent is an AI-powered educational platform developed for the **Google & Kaggle AI – Agent for Good Challenge**.
-
-The platform provides adaptive learning experiences using AI, personalized study roadmaps, interactive quizzes, accessibility features, and learning analytics to improve educational outcomes for learners of all backgrounds.
+</div>
 
 ---
 
-## Key Features
+# Table of Contents
 
-- AI-powered tutor using Google Gemini API
-- Personalized learning roadmap
-- Interactive study room
-- Adaptive quizzes with instant feedback
-- Progress tracking and analytics
-- Gamification (XP, badges, learning streaks)
-- Accessibility support (Text-to-Speech, high contrast, dyslexia-friendly mode)
-- Offline learning mode
-- Fully responsive interface
-
----
-
-# Demo
-
-## Onboarding
-
-<p align="center">
-<img src="./docs/screenshots/onboarding.png" width="900">
-</p>
+- Overview
+- Features
+- System Architecture
+- Application Flow
+- Technology Stack
+- Demo
+- Project Structure
+- Installation
+- Environment Variables
+- Future Enhancements
+- Documentation
+- License
 
 ---
 
-## Dashboard
+# Overview
 
-<p align="center">
-<img src="./docs/screenshots/dashboard.png" width="900">
-</p>
+Personalized Learning Agent is an AI-powered educational platform designed to provide every learner with a customized learning experience.
 
----
+The application analyzes a learner's interests, learning style, and knowledge level to generate adaptive learning pathways, intelligent tutoring, personalized quizzes, and real-time learning analytics.
 
-## Personalized Learning Roadmap
-
-<p align="center">
-<img src="./docs/screenshots/roadmap.png" width="900">
-</p>
+The platform supports both **Google Gemini AI** and an intelligent **Offline Mode**, ensuring uninterrupted learning regardless of internet availability.
 
 ---
 
-## Study Room
+# Features
 
-<p align="center">
-<img src="./docs/screenshots/study-room.png" width="900">
-</p>
+### AI Tutor
+
+- Google Gemini AI Integration
+- Explain Like I'm 5 (ELI5)
+- Deep Dive Explanations
+- Socratic Learning
+- Custom Analogies
+- Offline AI Tutor
+
+### Personalized Learning
+
+- Adaptive Learning Roadmap
+- Personalized Study Plans
+- Dynamic Topic Recommendations
+- Learning Style Detection
+- Diagnostic Assessment
+
+### Interactive Learning
+
+- Study Room
+- Flashcards
+- Interactive Quizzes
+- Instant Feedback
+- Progress Tracking
+
+### Analytics
+
+- Learning Streak
+- XP System
+- Mastery Levels
+- Weekly Progress
+- Quiz Analytics
+- Achievement Badges
+
+### Accessibility
+
+- Text-to-Speech
+- High Contrast Mode
+- Dyslexia-Friendly Font
+- Adjustable Typography
+- Keyboard Navigation
+
+### Offline Support
+
+- Local Storage
+- Offline AI Responses
+- Saved Progress
+- Cached Learning Content
 
 ---
 
-## AI Tutor
+# System Architecture
 
-<p align="center">
-<img src="./docs/screenshots/tutor-chat.png" width="900">
-</p>
+```text
+                          User
+                            │
+                            ▼
+                  Personalized Onboarding
+                            │
+                            ▼
+                 Diagnostic Assessment
+                            │
+                            ▼
+                      Dashboard
+                            │
+                            ▼
+               Adaptive Learning Roadmap
+                            │
+                            ▼
+                      Study Room
+          ┌─────────────────┴─────────────────┐
+          │                                   │
+          ▼                                   ▼
+ Learning Content                     AI Tutor
+          │                                   │
+          └─────────────────┬─────────────────┘
+                            ▼
+                      Quiz Engine
+                            ▼
+                   Progress Tracker
+                            ▼
+                  Analytics Dashboard
+                            ▼
+                      Local Storage
+```
 
 ---
 
-## Quiz Module
+# Application Flow
 
-<p align="center">
-<img src="./docs/screenshots/quiz.png" width="900">
-</p>
+```text
+Start
+
+↓
+
+Welcome Screen
+
+↓
+
+Create Profile
+
+↓
+
+Select Learning Style
+
+↓
+
+Choose Interests
+
+↓
+
+Diagnostic Assessment
+
+↓
+
+Dashboard
+
+↓
+
+Learning Roadmap
+
+↓
+
+Study Room
+
+↓
+
+Ask AI Tutor
+
+↓
+
+Complete Quiz
+
+↓
+
+Gain XP & Achievements
+
+↓
+
+Unlock New Topic
+
+↓
+
+View Analytics
+
+↓
+
+Continue Learning
+```
 
 ---
 
-## Learning Analytics
+# AI Workflow
 
-<p align="center">
-<img src="./docs/screenshots/analytics.png" width="900">
-</p>
+```text
+User Prompt
+      │
+      ▼
+Prompt Builder
+      │
+      ▼
+Google Gemini API
+      │
+      ▼
+Response Formatter
+      │
+      ▼
+Tutor Chat
+      │
+      ▼
+Learning Progress Updated
+```
+
+### Offline Mode
+
+```text
+User Prompt
+      │
+      ▼
+Offline Prompt Templates
+      │
+      ▼
+Knowledge Base
+      │
+      ▼
+AI Simulator
+      │
+      ▼
+Tutor Chat
+```
 
 ---
 
-## Accessibility Settings
-
-<p align="center">
-<img src="./docs/screenshots/accessibility.png" width="900">
-</p>
-
----
-
-## Technology Stack
+# Technology Stack
 
 | Category | Technology |
-|-----------|------------|
+|----------|------------|
 | Frontend | React, Vite |
 | Styling | CSS3 |
 | AI | Google Gemini API |
@@ -113,18 +252,74 @@ The platform provides adaptive learning experiences using AI, personalized study
 | Charts | Chart.js |
 | Animations | Framer Motion |
 | Storage | Local Storage |
-| Icons | Lucide React |
 | Accessibility | Web Speech API |
+| Icons | Lucide React |
 
 ---
 
-## Project Structure
+# Demo
+
+## Landing Page
+
+![Landing](docs/screenshots/landing.png)
+
+---
+
+## Dashboard
+
+![Dashboard](docs/screenshots/dashboard.png)
+
+---
+
+## Personalized Learning Roadmap
+
+![Roadmap](docs/screenshots/roadmap.png)
+
+---
+
+## Study Room
+
+![Study Room](docs/screenshots/study-room.png)
+
+---
+
+## AI Tutor
+
+![AI Tutor](docs/screenshots/tutor-chat.png)
+
+---
+
+## Quiz Module
+
+![Quiz](docs/screenshots/quiz.png)
+
+---
+
+## Analytics Dashboard
+
+![Analytics](docs/screenshots/analytics.png)
+
+---
+
+## Accessibility Settings
+
+![Accessibility](docs/screenshots/accessibility.png)
+
+---
+
+# Project Structure
 
 ```text
 personalized-learning-agent/
-│
+
 ├── docs/
-│   └── screenshots/
+│   ├── assets/
+│   ├── diagrams/
+│   ├── screenshots/
+│   ├── IMPLEMENTATION_PLAN.md
+│   ├── SYSTEM_ARCHITECTURE.md
+│   ├── USER_FLOW.md
+│   └── API.md
 │
 ├── public/
 │
@@ -134,6 +329,7 @@ personalized-learning-agent/
 │   ├── context/
 │   ├── data/
 │   ├── hooks/
+│   ├── pages/
 │   ├── services/
 │   ├── styles/
 │   ├── utils/
@@ -143,40 +339,39 @@ personalized-learning-agent/
 ├── README.md
 ├── package.json
 ├── vite.config.js
-└── .env.example
+├── .env.example
+└── LICENSE
 ```
 
 ---
 
-## Getting Started
+# Installation
 
-### Clone the repository
+Clone the repository
 
 ```bash
 git clone https://github.com/<your-username>/personalized-learning-agent.git
 ```
 
-### Install dependencies
+Navigate to the project
+
+```bash
+cd personalized-learning-agent
+```
+
+Install dependencies
 
 ```bash
 npm install
 ```
 
-### Configure Environment Variables
-
-Create a `.env` file.
-
-```env
-VITE_GEMINI_API_KEY=YOUR_API_KEY
-```
-
-### Run the application
+Start the development server
 
 ```bash
 npm run dev
 ```
 
-Open:
+Open the application
 
 ```
 http://localhost:5173
@@ -184,40 +379,59 @@ http://localhost:5173
 
 ---
 
-## Roadmap
+# Environment Variables
 
-- AI-powered tutoring
-- Adaptive learning pathways
-- Interactive quizzes
-- Learning analytics
-- Accessibility enhancements
-- Offline support
-- Voice-based tutoring *(Planned)*
-- PDF learning assistant *(Planned)*
+Create a `.env` file in the project root.
+
+```env
+VITE_GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+If no API key is provided, the application automatically switches to **Offline Mode**.
 
 ---
 
-## Documentation
+# Future Enhancements
 
-Project documentation is available in the `docs` directory.
+- Voice-Based AI Tutor
+- AI Mind Maps
+- AI Flashcard Generator
+- PDF Learning Assistant
+- OCR Document Reader
+- Cloud Synchronization
+- Mobile Application
+- Teacher Dashboard
+- Parent Dashboard
+- Collaborative Learning
 
+---
+
+# Documentation
+
+Complete documentation is available in the **docs** folder.
+
+- Project Overview
 - Implementation Plan
 - System Architecture
+- User Flow
 - API Documentation
-- User Guide
+- Testing Strategy
+- Deployment Guide
+- Future Scope
 
 ---
 
-## License
+# License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
-## Author
+# Author
 
 **Lakshay Sharma**
 
-B.Tech – Computer Science & Engineering (Cyber Security)
+Bachelor of Technology  
+Computer Science & Engineering (Cyber Security)
 
 Google & Kaggle AI – Agent for Good Challenge
