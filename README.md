@@ -384,6 +384,6 @@ This project is licensed under the **MIT License**.
 **Lakshay Sharma**
 
 Bachelor of Technology  
-Computer Science & Engineering (Cyber Security)
+Computer Science & Engineering (AI/ML)
 
 Google & Kaggle AI – Agent for Good Challenge
