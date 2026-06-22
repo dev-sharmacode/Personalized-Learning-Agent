@@ -3,6 +3,7 @@ import Roadmap from "./Roadmap";
 import TutorChat from "./TutorChat";
 import Quiz from "./Quiz";
 import ProgressCard from "./ProgressCard";
+import AccessibilityPanel from "./AccessibilityPanel";
 
 function Dashboard() {
   return (
@@ -10,13 +11,13 @@ function Dashboard() {
       <Navbar />
 
       <div className="container dashboard">
+
         <h1>Welcome Back 👋</h1>
 
-        <p>
-          Continue your personalized learning journey with your AI-powered tutor.
-        </p>
+        <p>Continue your personalized learning journey.</p>
 
         <div className="cards">
+
           <div className="card">
             <h3>📚 Current Course</h3>
             <p>Artificial Intelligence Fundamentals</p>
@@ -36,6 +37,7 @@ function Dashboard() {
             <h3>🎯 Progress</h3>
             <p>35% Completed</p>
           </div>
+
         </div>
 
         <br />
@@ -56,7 +58,8 @@ function Dashboard() {
 
         <br />
 
-        <button>Continue Learning</button>
+        <AccessibilityPanel />
+
       </div>
     </>
   );
