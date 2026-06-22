@@ -1,81 +1,59 @@
 import { useState } from "react";
+import quizData from "../data/quizData";
 
 function Quiz() {
   const [selected, setSelected] = useState("");
   const [result, setResult] = useState("");
 
+  const quiz = quizData[0];
+
   const checkAnswer = () => {
-    if (selected === "Artificial Intelligence") {
-      setResult("✅ Correct! Great job.");
+    if (selected === quiz.answer) {
+      setResult("✅ Correct!");
     } else {
-      setResult("❌ Incorrect. Try again!");
+      setResult("❌ Wrong Answer");
     }
   };
 
   return (
     <div className="card">
-      <h2>Quick Quiz</h2>
+      <h2>📝 Quiz</h2>
 
-      <p style={{ marginTop: "15px" }}>
-        What does AI stand for?
-      </p>
+      <p>{quiz.question}</p>
 
-      <div style={{ marginTop: "15px" }}>
+      {quiz.options.map((option) => (
+        <div key={option}>
+          <label>
+            <input
+              type="radio"
+              value={option}
+              checked={selected === option}
+              onChange={(e) => setSelected(e.target.value)}
+            />
 
-        <label>
-          <input
-            type="radio"
-            name="quiz"
-            value="Artificial Intelligence"
-            onChange={(e) => setSelected(e.target.value)}
-          />
-          Artificial Intelligence
-        </label>
+            {" "}
 
-        <br /><br />
+            {option}
+          </label>
 
-        <label>
-          <input
-            type="radio"
-            name="quiz"
-            value="Advanced Internet"
-            onChange={(e) => setSelected(e.target.value)}
-          />
-          Advanced Internet
-        </label>
+          <br />
+          <br />
+        </div>
+      ))}
 
-        <br /><br />
-
-        <label>
-          <input
-            type="radio"
-            name="quiz"
-            value="Automated Interface"
-            onChange={(e) => setSelected(e.target.value)}
-          />
-          Automated Interface
-        </label>
-
-      </div>
-
-      <button
-        style={{ marginTop: "20px" }}
-        onClick={checkAnswer}
-      >
-        Submit Answer
+      <button onClick={checkAnswer}>
+        Submit
       </button>
 
       {result && (
-        <div
+        <p
           style={{
             marginTop: "20px",
-            background: "#EEF2FF",
-            padding: "15px",
-            borderRadius: "10px"
+            fontWeight: "bold"
           }}
         >
-          <strong>{result}</strong>
-        </div>
+          {result}
+        </p>
       )}
     </div>
   );
